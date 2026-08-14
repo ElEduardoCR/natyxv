@@ -411,7 +411,6 @@ a {
 .welcome h2,
 .gallery h2,
 .details h2,
-.music h2,
 .closing h2 {
   font-family: var(--font-display), Georgia, serif;
   font-weight: 500;
@@ -637,48 +636,6 @@ a {
 .gallery-note span { color: #f6d693; }
 .gallery-note p { font-family: var(--font-display), Georgia, serif; font-size: clamp(1.6rem, 2.5vw, 2.5rem); font-style: italic; line-height: 1.1; }
 
-.music {
-  align-items: center;
-  background:
-    radial-gradient(circle at 25% 50%, rgba(215,25,103,.22), transparent 28%),
-    var(--navy-soft);
-  color: white;
-  display: grid;
-  gap: clamp(3rem, 8vw, 8rem);
-  grid-template-columns: minmax(16rem, .8fr) minmax(20rem, 1.2fr);
-  overflow: hidden;
-  padding: clamp(6rem, 10vw, 9rem) clamp(1.5rem, 9vw, 9rem);
-}
-
-.music-disc {
-  align-items: center;
-  aspect-ratio: 1;
-  background: repeating-radial-gradient(circle, #091627 0 3px, #15243a 4px 6px);
-  border-radius: 50%;
-  box-shadow: 0 2rem 5rem rgba(0,0,0,.35);
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 27rem;
-  position: relative;
-  width: 100%;
-}
-
-.music-disc::before {
-  background: radial-gradient(circle, var(--ivory) 0 8%, var(--pink) 8.5% 52%, #ec5b72 53% 100%);
-  border-radius: 50%;
-  content: "";
-  height: 34%;
-  position: absolute;
-  width: 34%;
-}
-
-.music-disc span { color: white; font-family: var(--font-display), Georgia, serif; font-size: 2.2rem; font-style: italic; position: relative; z-index: 1; }
-.music h2 { font-size: clamp(4rem, 8vw, 7rem); line-height: .85; margin: 0; }
-.music-artist { color: #e8c989; font-size: .7rem; letter-spacing: .24em; margin: 1.2rem 0 2rem; text-transform: uppercase; }
-.music-intro { font-family: var(--font-display), Georgia, serif; font-size: 1.35rem; }
-.music-video-link { border-bottom: 1px solid rgba(232,201,137,.55); display: inline-flex; font-size: .62rem; gap: .65rem; letter-spacing: .15em; margin-top: 1.4rem; padding-bottom: .55rem; text-decoration: none; text-transform: uppercase; }
-
 .closing {
   align-items: center;
   display: flex;
@@ -745,11 +702,6 @@ footer a { justify-self: end; text-decoration: none; }
   .gallery-tall { grid-column: 1; grid-row: 2 / 4; }
   .gallery-wide { grid-column: 2; grid-row: 2; }
   .gallery-note { grid-column: 2; grid-row: 3; }
-
-  .music { display: block; padding-left: 1.5rem; padding-right: 1.5rem; }
-  .music-disc { margin-bottom: 4rem; max-width: 20rem; }
-  .music-copy { text-align: center; }
-  .music-video-link { justify-content: center; }
 
   .closing { min-height: 43rem; }
   .closing > img { object-position: 58% center; }

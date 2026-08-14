@@ -150,21 +150,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="music" aria-labelledby="music-title">
-        <div className="music-disc" aria-hidden="true">
-          <span>N</span>
-        </div>
-        <div className="music-copy">
-          <p className="eyebrow light">La canción de este momento</p>
-          <h2 id="music-title">Count on Me</h2>
-          <p className="music-artist">Bruno Mars</p>
-          <p className="music-intro">Nuestra invitación comienza con esta canción. Puedes pausarla o volver a escucharla con el control de música.</p>
-          <a className="music-video-link" href="https://www.youtube.com/watch?v=6k8cpUkKK4c" target="_blank" rel="noreferrer">
-            Ver video oficial <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </section>
-
       <section className="closing" aria-labelledby="closing-title">
         <img src="/naty-caballo.jpeg" alt="Natalia sobre un caballo negro" />
         <div className="closing-overlay" />
