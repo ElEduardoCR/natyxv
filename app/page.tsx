@@ -1,23 +1,29 @@
+import { MusicExperience } from "./MusicExperience";
+
+const mapUrl = "https://www.google.com/maps/place/San+Carlos+Garden/@28.2146466,-105.4858718,1078m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86eb15c7ab30ec25:0xd8398acbe2d83d3c!8m2!3d28.2146466!4d-105.4832969!16s%2Fg%2F11srnj8490?entry=ttu&g_ep=EgoyMDI2MDgxMS4wIKXMDSoASAFQAw%3D%3D";
+
+const googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+XV+de+Natalia+Ivon+Martinez+Jaquez&dates=20260922T200000%2F20260922T235900&ctz=America%2FChihuahua&details=Acompa%C3%B1ame+a+celebrar+mis+quince+a%C3%B1os.&location=San+Carlos+Garden%2C+Delicias%2C+Chihuahua";
+
 const details = [
-  { label: "Fecha", value: "Próximamente", accent: "01" },
-  { label: "Hora", value: "Por confirmar", accent: "02" },
-  { label: "Lugar", value: "Muy pronto", accent: "03" },
+  { label: "Fecha", value: "22 de septiembre", note: "2026", accent: "22" },
+  { label: "Hora", value: "8:00 p. m.", note: "A partir de", accent: "08" },
+  { label: "Lugar", value: "San Carlos Garden", note: "Delicias, Chihuahua", accent: "SC", href: mapUrl },
 ];
 
 const photos = [
   {
     src: "/naty-jardin.jpeg",
-    alt: "Naty sentada entre flores y vegetación",
+    alt: "Natalia sentada entre flores y vegetación",
     className: "gallery-main",
   },
   {
     src: "/naty-flores-vertical.jpeg",
-    alt: "Naty con vestido de flores sosteniendo un diente de león",
+    alt: "Natalia con vestido de flores sosteniendo un diente de león",
     className: "gallery-tall",
   },
   {
     src: "/naty-caballo.jpeg",
-    alt: "Naty montando un caballo negro",
+    alt: "Natalia montando un caballo negro",
     className: "gallery-wide",
   },
 ];
@@ -25,11 +31,12 @@ const photos = [
 export default function Home() {
   return (
     <main>
+      <MusicExperience />
       <section className="hero" aria-labelledby="hero-title">
         <img
           className="hero-photo"
           src="/naty-caballo-vertical.jpeg"
-          alt="Naty junto a un caballo negro con un vestido azul floreado"
+          alt="Natalia junto a un caballo negro con un vestido azul floreado"
         />
         <div className="hero-overlay" />
         <div className="hero-bloom hero-bloom-one" aria-hidden="true" />
@@ -44,7 +51,10 @@ export default function Home() {
         <div className="hero-content">
           <p className="eyebrow light">Con mucha alegría</p>
           <p className="mis-xv">Mis XV</p>
-          <h1 id="hero-title">Naty <span>Jáquez</span></h1>
+          <h1 id="hero-title">
+            <span className="hero-first-name">Natalia Ivon</span>
+            <span className="hero-last-name">Martinez Jaquez</span>
+          </h1>
           <p className="hero-invite">
             Quiero que seas parte de un día que guardaré para siempre en mi corazón.
           </p>
@@ -54,7 +64,7 @@ export default function Home() {
         </div>
 
         <p className="hero-side hero-side-left" aria-hidden="true">Quince años</p>
-        <p className="hero-side hero-side-right" aria-hidden="true">Naty · Naty · Naty</p>
+        <p className="hero-side hero-side-right" aria-hidden="true">Natalia · Mis XV · Natalia</p>
       </section>
 
       <section className="welcome" id="invitacion" aria-labelledby="welcome-title">
@@ -67,14 +77,14 @@ export default function Home() {
             Con el corazón lleno de ilusión, te invito a acompañarme en la celebración de mis
             quince años. Tu presencia hará que esta noche sea todavía más especial.
           </p>
-          <p className="signature">Con cariño, Naty</p>
+          <p className="signature">Con cariño, Natalia</p>
         </div>
         <div className="flower-mark" aria-hidden="true">❀</div>
       </section>
 
-      <section className="portrait-story" aria-label="Retrato de Naty">
+      <section className="portrait-story" aria-label="Retrato de Natalia">
         <div className="portrait-frame">
-          <img src="/naty-flores-vertical.jpeg" alt="Naty en el campo con un vestido de flores" />
+          <img src="/naty-flores-vertical.jpeg" alt="Natalia en el campo con un vestido de flores" />
           <span className="portrait-tag">Una tarde soñada</span>
         </div>
         <div className="portrait-copy">
@@ -90,7 +100,7 @@ export default function Home() {
         <div className="details-heading">
           <p className="eyebrow light">Reserva este momento</p>
           <h2 id="details-title">Mi gran día</h2>
-          <p>La fecha y el lugar estarán aquí en cuanto queden confirmados.</p>
+          <p>Te espero para compartir una noche inolvidable.</p>
         </div>
 
         <div className="details-grid">
@@ -98,13 +108,28 @@ export default function Home() {
             <article className="detail-card" key={detail.label}>
               <span className="detail-number" aria-hidden="true">{detail.accent}</span>
               <p>{detail.label}</p>
-              <h3>{detail.value}</h3>
+              <h3>
+                {detail.href ? (
+                  <a href={detail.href} target="_blank" rel="noreferrer">{detail.value}</a>
+                ) : detail.value}
+              </h3>
+              <span className="detail-note">{detail.note}</span>
               <span className="detail-flourish" aria-hidden="true">✦</span>
             </article>
           ))}
         </div>
 
-        <p className="details-note">Vuelve pronto para conocer todos los detalles.</p>
+        <div className="event-actions" aria-label="Acciones del evento">
+          <a className="event-button event-button-primary" href={googleCalendarUrl} target="_blank" rel="noreferrer">
+            <span aria-hidden="true">＋</span> Agregar a Google Calendar
+          </a>
+          <a className="event-button" href="/natalia-xv.ics" download>
+            <span aria-hidden="true">↓</span> Guardar en otro calendario
+          </a>
+          <a className="event-button" href={mapUrl} target="_blank" rel="noreferrer">
+            <span aria-hidden="true">⌖</span> Cómo llegar
+          </a>
+        </div>
       </section>
 
       <section className="gallery" aria-labelledby="gallery-title">
@@ -133,32 +158,25 @@ export default function Home() {
           <p className="eyebrow light">La canción de este momento</p>
           <h2 id="music-title">Count on Me</h2>
           <p className="music-artist">Bruno Mars</p>
-          <p className="music-intro">Dale play y acompáñame a celebrar.</p>
-          <iframe
-            className="spotify-player"
-            title="Reproductor de Count on Me de Bruno Mars en Spotify"
-            src="https://open.spotify.com/embed/track/7l1qvxWjxcKpB9PCtBuTbU?utm_source=generator&theme=0"
-            width="100%"
-            height="152"
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          />
+          <p className="music-intro">Nuestra invitación comienza con esta canción. Puedes pausarla o volver a escucharla con el control de música.</p>
+          <a className="music-video-link" href="https://www.youtube.com/watch?v=6k8cpUkKK4c" target="_blank" rel="noreferrer">
+            Ver video oficial <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </section>
 
       <section className="closing" aria-labelledby="closing-title">
-        <img src="/naty-caballo.jpeg" alt="Naty sobre un caballo negro" />
+        <img src="/naty-caballo.jpeg" alt="Natalia sobre un caballo negro" />
         <div className="closing-overlay" />
         <div className="closing-copy">
           <p className="eyebrow light">Nos vemos muy pronto</p>
           <h2 id="closing-title">Gracias por ser parte<br />de mi <em>historia</em>.</h2>
-          <p>Naty Jáquez · Mis XV</p>
+          <p>Natalia Ivon Martinez Jaquez · Mis XV</p>
         </div>
       </section>
 
       <footer>
-        <span className="footer-monogram" aria-hidden="true">NJ</span>
+        <span className="footer-monogram" aria-hidden="true">NMJ</span>
         <p>Hecho con ilusión para una noche inolvidable.</p>
         <a href="#" aria-label="Volver al inicio">Volver arriba ↑</a>
       </footer>
