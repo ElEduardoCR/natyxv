@@ -26,14 +26,14 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(baseUrl),
     title: "Mis XV · Natalia Ivon Martinez Jaquez",
-    description: "Acompáñame a celebrar mis quince años el 22 de septiembre de 2026 en San Carlos Garden.",
+    description: "Acompáñame a celebrar mis quince años el 19 de septiembre de 2026 en San Carlos Garden.",
     icons: {
       icon: "/naty-caballo-vertical.jpeg",
       apple: "/naty-caballo-vertical.jpeg",
     },
     openGraph: {
       title: "Mis XV · Natalia Ivon Martinez Jaquez",
-      description: "22 de septiembre de 2026 · 8:00 p. m. · San Carlos Garden, Delicias.",
+      description: "19 de septiembre de 2026 · 8:00 p. m. · San Carlos Garden, Delicias.",
       type: "website",
       locale: "es_MX",
       images: [{ url: socialImage, width: 1730, height: 909, alt: "Mis XV · Natalia Ivon Martinez Jaquez" }],
@@ -41,7 +41,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: "Mis XV · Natalia Ivon Martinez Jaquez",
-      description: "22 de septiembre de 2026 · 8:00 p. m. · San Carlos Garden, Delicias.",
+      description: "19 de septiembre de 2026 · 8:00 p. m. · San Carlos Garden, Delicias.",
       images: [socialImage],
     },
   };

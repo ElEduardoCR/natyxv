@@ -2,10 +2,10 @@ import { MusicExperience } from "./MusicExperience";
 
 const mapUrl = "https://www.google.com/maps/place/San+Carlos+Garden/@28.2146466,-105.4858718,1078m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86eb15c7ab30ec25:0xd8398acbe2d83d3c!8m2!3d28.2146466!4d-105.4832969!16s%2Fg%2F11srnj8490?entry=ttu&g_ep=EgoyMDI2MDgxMS4wIKXMDSoASAFQAw%3D%3D";
 
-const googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+XV+de+Natalia+Ivon+Martinez+Jaquez&dates=20260922T200000%2F20260922T235900&ctz=America%2FChihuahua&details=Acompa%C3%B1ame+a+celebrar+mis+quince+a%C3%B1os.&location=San+Carlos+Garden%2C+Delicias%2C+Chihuahua";
+const googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+XV+de+Natalia+Ivon+Martinez+Jaquez&dates=20260919T200000%2F20260919T235900&ctz=America%2FChihuahua&details=Acompa%C3%B1ame+a+celebrar+mis+quince+a%C3%B1os.&location=San+Carlos+Garden%2C+Delicias%2C+Chihuahua";
 
 const details = [
-  { label: "Fecha", value: "22 de septiembre", note: "2026", accent: "22" },
+  { label: "Fecha", value: "19 de septiembre", note: "2026", accent: "19" },
   { label: "Hora", value: "8:00 p. m.", note: "A partir de", accent: "08" },
   { label: "Lugar", value: "San Carlos Garden", note: "Delicias, Chihuahua", accent: "SC", href: mapUrl },
 ];

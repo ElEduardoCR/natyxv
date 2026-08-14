@@ -46,7 +46,7 @@ export function MusicExperience() {
             <p className="entry-xv">Mis XV</p>
             <h2 id="entry-title">Natalia Ivon</h2>
             <p className="entry-last-name">Martinez Jaquez</p>
-            <p className="entry-date">22 · Septiembre · 2026</p>
+            <p className="entry-date">19 · Septiembre · 2026</p>
             <button type="button" onClick={beginInvitation}>
               <span aria-hidden="true">♫</span>
               Abrir invitación
