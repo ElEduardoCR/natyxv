@@ -4,13 +4,23 @@ PRODID:-//Invitacion Natalia XV//ES
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:natalia-ivon-xv-20260919@natalia-xv.local
+UID:natalia-ivon-misa-20260919@natalia-xv.local
+DTSTAMP:20260814T020000Z
+DTSTART;TZID=America/Chihuahua:20260919T180000
+DTEND;TZID=America/Chihuahua:20260919T190000
+SUMMARY:Misa · XV de Natalia Ivon Martinez Jaquez
+LOCATION:Parroquia San Martín de Porres\, Lotes Urbanos\, Delicias\, Chihuahua
+DESCRIPTION:Misa de acción de gracias por los XV años de Natalia.
+URL:https://www.google.com/maps/search/?api=1&query=Parroquia+San+Mart%C3%ADn+de+Porres%2C+Lotes+Urbanos%2C+Delicias%2C+Chihuahua
+END:VEVENT
+BEGIN:VEVENT
+UID:natalia-ivon-recepcion-20260919@natalia-xv.local
 DTSTAMP:20260814T020000Z
 DTSTART;TZID=America/Chihuahua:20260919T200000
 DTEND;TZID=America/Chihuahua:20260919T235900
-SUMMARY:Mis XV de Natalia Ivon Martinez Jaquez
+SUMMARY:Recepción · XV de Natalia Ivon Martinez Jaquez
 LOCATION:San Carlos Garden\, Delicias\, Chihuahua
-DESCRIPTION:Acompáñame a celebrar mis quince años en San Carlos Garden.
+DESCRIPTION:Recepción a las 8:00 p. m. El vals iniciará a las 8:40 p. m.
 URL:https://www.google.com/maps/place/San+Carlos+Garden/@28.2146466,-105.4858718,1078m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86eb15c7ab30ec25:0xd8398acbe2d83d3c!8m2!3d28.2146466!4d-105.4832969!16s%2Fg%2F11srnj8490
 END:VEVENT
 END:VCALENDAR

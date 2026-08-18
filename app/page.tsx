@@ -1,13 +1,15 @@
 import { MusicExperience } from "./MusicExperience";
 
 const mapUrl = "https://www.google.com/maps/place/San+Carlos+Garden/@28.2146466,-105.4858718,1078m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86eb15c7ab30ec25:0xd8398acbe2d83d3c!8m2!3d28.2146466!4d-105.4832969!16s%2Fg%2F11srnj8490?entry=ttu&g_ep=EgoyMDI2MDgxMS4wIKXMDSoASAFQAw%3D%3D";
+const massMapUrl = "https://www.google.com/maps/search/?api=1&query=Parroquia+San+Mart%C3%ADn+de+Porres%2C+Lotes+Urbanos%2C+Delicias%2C+Chihuahua";
 
-const googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+XV+de+Natalia+Ivon+Martinez+Jaquez&dates=20260919T200000%2F20260919T235900&ctz=America%2FChihuahua&details=Acompa%C3%B1ame+a+celebrar+mis+quince+a%C3%B1os.&location=San+Carlos+Garden%2C+Delicias%2C+Chihuahua";
+const googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+XV+de+Natalia+Ivon+Martinez+Jaquez&dates=20260919T200000%2F20260919T235900&ctz=America%2FChihuahua&details=Recepci%C3%B3n+a+las+8%3A00+p.+m.+El+vals+iniciar%C3%A1+a+las+8%3A40+p.+m.&location=San+Carlos+Garden%2C+Delicias%2C+Chihuahua";
 
 const details = [
-  { label: "Fecha", value: "19 de septiembre", note: "2026", accent: "19" },
-  { label: "Hora", value: "8:00 p. m.", note: "A partir de", accent: "08" },
-  { label: "Lugar", value: "San Carlos Garden", note: "Delicias, Chihuahua", accent: "SC", href: mapUrl },
+  { label: "Fecha", value: "19 de septiembre", note: "Sábado · 2026", accent: "19" },
+  { label: "Misa", value: "6:00 p. m.", note: "Parroquia San Martín de Porres · Lotes Urbanos", accent: "06", href: massMapUrl },
+  { label: "Recepción", value: "8:00 p. m.", note: "San Carlos Garden · Delicias", accent: "08", href: mapUrl },
+  { label: "Vals", value: "8:40 p. m.", note: "Inicio del vals", accent: "XV" },
 ];
 
 const photos = [
@@ -30,7 +32,7 @@ const photos = [
 
 export default function Home() {
   return (
-    <main>
+    <main id="inicio">
       <MusicExperience />
       <section className="hero" aria-labelledby="hero-title">
         <img
@@ -124,10 +126,13 @@ export default function Home() {
             <span aria-hidden="true">＋</span> Agregar a Google Calendar
           </a>
           <a className="event-button" href="/natalia-xv.ics" download>
-            <span aria-hidden="true">↓</span> Guardar en otro calendario
+            <span aria-hidden="true">↓</span> Guardar itinerario
+          </a>
+          <a className="event-button" href={massMapUrl} target="_blank" rel="noreferrer">
+            <span aria-hidden="true">⌖</span> Ubicación de la misa
           </a>
           <a className="event-button" href={mapUrl} target="_blank" rel="noreferrer">
-            <span aria-hidden="true">⌖</span> Cómo llegar
+            <span aria-hidden="true">⌖</span> Ubicación de la recepción
           </a>
         </div>
       </section>
@@ -163,7 +168,7 @@ export default function Home() {
       <footer>
         <span className="footer-monogram" aria-hidden="true">NMJ</span>
         <p>Hecho con ilusión para una noche inolvidable.</p>
-        <a href="#" aria-label="Volver al inicio">Volver arriba ↑</a>
+        <a href="#inicio" aria-label="Volver al inicio">Volver arriba ↑</a>
       </footer>
     </main>
   );
